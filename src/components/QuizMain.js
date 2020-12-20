@@ -2,38 +2,15 @@ import React, {Component} from 'react';
 import Question from './question/Question';
 import Answer from './answer/Answer';
 import './QuizMain.css';
+import {questions, answers, correctAnswers} from './questions';
 
 export default class Quiz extends Component {
 
     // initiating the local state
     state = {
-        quiestions: {
-            1: 'What US city is known as the "birthplace of jazz"?',
-            2: 'What is the capital of Greece?',
-            3: 'What planet gave birth to Superman?'
-        },
-        answers: {
-            1: {
-                1: 'Chicago',
-                2: 'New Orleans',
-                3: 'New York'
-            },
-            2: {
-                1: 'Athens',
-                2: 'Patras',
-                3: 'Kalamata'
-            },
-            3: {
-                1: 'Krypton',
-                2: 'Mars',
-                3: 'Saturn'
-            }
-        },
-        correctAnswers: {
-            1: '2',
-            2: '1',
-            3: '1'
-        },
+        quiestions: questions,
+        answers: answers,
+        correctAnswers: correctAnswers,
         correctAnswer: 0,
         clickedAnswer: 0,
         step: 1,
